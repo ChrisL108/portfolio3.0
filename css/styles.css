@@ -13,7 +13,6 @@
     height: 50rem;
 	width: 100%;
 	margin-bottom: 0;
-	border-bottom: 2px solid #4E4E4E;
 	overflow: hidden;
 	text-align: center;
 	display: flex;
@@ -33,7 +32,7 @@
 	animation:         spin 8s infinite alternate;
 }
 
-/* ~~~~~ What-I-Do Section */
+/* ~~~~~ WHAT-I-DO */
 #what-i-do {
 	color: gray;
 	background: -webkit-linear-gradient(bottom, #0B1320, #000000, #404D58);
@@ -61,6 +60,29 @@
 
 
 
+/* ~~~~~~~ FOOTER */
+footer {
+    background-color: #282828;
+    padding: 1rem;
+}
+footer a, footer p {
+	color: gray;
+	text-decoration: none;
+	font-size: 1.3rem;
+	padding: 1rem;
+}
+#social-list li {
+	align-self: center;
+	list-style: none;
+	display: inline-flex;
+	padding: .75rem .50rem;
+}
+#social-list li a {
+	color: gray;
+}
+#social-list li a:hover {
+	color: black;
+}
 
 /* Color Scheme profile colors for chrislacaille.com */
 .blue-1 {
