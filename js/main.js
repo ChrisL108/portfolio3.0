@@ -22,11 +22,20 @@ $(function() {
 		$userMsg = $("#userMsg"),
 		$formMessages = $("#form-messages");
 
-	$(window).resize(function() {
+	
+	// Change jumbotron to fit to viewport width/height
+	// on page load
+	var resizeWindow = (function resize() {
 		$jumbotron.css({
 			"height": window.innerHeight,
 			"width": "auto"
 		});
+	});
+	resizeWindow();
+	
+	// And re-size jumbotron when window size changes
+	$(window).resize(function() {
+		resizeWindow();
 	});
 // Smoother scrolling 
 // Not self-executing so it works on dynamic 'click here' button
@@ -73,9 +82,10 @@ $(function() {
 		// Damper on 10 .. can change ... higher is slower
 		xp += (mouseX - xp) / 10;
 		yp += (mouseY - yp) / 10;
+		var stopY = $(window).height() - 200;
 		// Check to see if astronaught is within jumbotron
 		if ( xp > 50 && xp < ($window.width() - 150) && 
-			yp > 0 && yp < 430) 
+			yp > 0 && yp < stopY ) 
 		{
 			TweenLite.to($astronaut, 1.5, 
 						{ left:xp, top:yp, opacity: 1  });
@@ -87,7 +97,7 @@ $(function() {
 
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $projectTitles = $(".project-title");
+	var $navbar = $(".navbar");
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
@@ -95,10 +105,11 @@ $(function() {
 				$about_text2.fadeIn(2000);
 			});
 		}
-		// Projects heading slide-in
-		if ( $window.scrollTop() > $projectTitles.offset().top / 2) {
-			$projectTitles.animate({left: 0}, 1500);
-		} 
+		if ( $window.scrollTop() > 20) {
+			$navbar.removeClass("navbar-static-top");
+			$navbar.addClass("navbar-fixed-top");
+
+		}
 	});
 
 // Project images hover effect
@@ -144,7 +155,7 @@ $(function() {
 	}); // END AJAX
 
 
-});   // end ready())
+});   // end ready()
 
 
 
