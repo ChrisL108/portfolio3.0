@@ -1,3 +1,6 @@
+
+
+
 /* Jumbotron */
 .jumbotron {
 	position: relative;
@@ -54,4 +57,24 @@
 }
 #what-i-do .col-md-4 i:hover {
     color: #cccccc;
+}
+
+
+
+
+/* Color Scheme profile colors for chrislacaille.com */
+.blue-1 {
+    color: #00AAFF;
+}
+.blue-2 {
+    color: #005E8D;
+}
+.blue-3 {
+    color: #00334D;
+}
+.blue-4 {
+    color: #002233;
+}
+.black {
+    color: #000;
 }
