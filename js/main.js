@@ -1,10 +1,10 @@
 // By: Chris LaCaille
-// ~~ My javascript/jquery code for my portfolio page - chrislacaille.com
+// ~~ My javascript/jquery code for portfolio page - chrislacaille.com
 
 $(function() {
 	// Jumbotron and #about section vars 
 	var $jumbotron = $(".jumbotron"),
-		$about = $("#about"), 
+		// $about = $("#about"), 
 		$about_text = $("#about_text"),
 		$about_text2 = $("#about_text2"),
 		$projectImgs = $(".project-imgs");
@@ -25,17 +25,16 @@ $(function() {
 	
 	// Change jumbotron to fit to viewport width/height
 	// on page load
-	var resizeWindow = (function resize() {
-		$jumbotron.css({
-			"height": window.innerHeight,
-			"width": "auto"
+	function resizeJumbo() {
+		$jumbotron.animate({
+			"height": window.innerHeight
 		});
-	});
-	resizeWindow();
+	}
+	resizeJumbo();
 	
 	// And re-size jumbotron when window size changes
 	$(window).resize(function() {
-		resizeWindow();
+		resizeJumbo();
 	});
 // Smoother scrolling 
 // Not self-executing so it works on dynamic 'click here' button
@@ -97,21 +96,20 @@ $(function() {
 		}
 	}, 75);
 
+	// ~~~~~~ WINDOW SCROLL events
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $navbar = $("nav");
-	var navHeight =  $("nav").offset().top;
+	var $navbar = $("nav"),
+		$titleMeta = $(".title-meta");
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		
-		if ( $window.scrollTop() > navHeight) {
+		if ( $window.scrollTop() > 100) {
 			$navbar.removeClass("static-nav").addClass("fixed-nav");
-			// TweenLite.to( $("nav") , {className: "+=fixed-nav"} );
-			// TweenLite.to( $("nav") , {className: "-=static-nav"} );
+			$titleMeta.fadeOut();
 		} else {
+			$titleMeta.fadeIn();
 			$navbar.removeClass("fixed-nav").addClass("static-nav");
-			// TweenLite.to( $("nav") , {className: "+=static-nav"} );
-			// TweenLite.to( $("nav") , {className: "-=fixed-nav"} );
 		}
 	});
 

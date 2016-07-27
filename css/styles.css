@@ -1,25 +1,56 @@
 
-html {
+html, body {
 	font-size: 18px;
+	/*font-family: 'Cinzel', serif;*/
+	font-family: 'Sarpanch', sans-serif;
+	/*font-weight: 700;*/
+	background-color: #002233;
 }
+
+/*~~~~~~ NAVIGATION*/
 .navbar {
 	height: 100px;
+	background-color: #002233;
+	color: #00AAFF;
+	
+	overflow: visible;
+	/*display: flex;*/
+	-webkit-transition: height 1000 ease;
+	-moz-transition: height 1000 ease;
+	transition: height 1000 ease;
 }
-.navbar li a {
-	font-size: 1.2rem;
+navbar-toggle {
+	background-color:#00AAFF; 
 }
+/* all links */
+.navbar li a, .navbar-brand {
+	font-size: 1.5rem;
+	color: #00AAFF!important;
+}
+.navbar li {
+	display: inline-block;
+}
+/*STATIC navbar*/
+.static-nav {
+	position: static;
+	height: 100px;
+	padding: -2rem;
+}
+/* FIXED navbar */
 .fixed-nav {
 	position: fixed;
     z-index: 99;
     width: 100%;
 	padding:0;
 	opacity: 0.8;
+	height: 50px;
 }
-.static-nav {
-	position: static;
-	height: 100px;
-	padding: -2rem;
+.fixed-nav ul li a {
+	font-size: 1.2rem;
+	margin-right: 0.5rem;
 }
+/*@media screen only (max-width)*/
+
 /* Jumbotron */
 .jumbotron {
 	position: relative;
@@ -34,16 +65,22 @@ html {
 	margin-bottom: 0;
 	overflow: hidden;
 	color: rgba(255,255,255,.5);
-
+	font-weight: 900;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	
 }
+.jumbotron button {
+	color: #00AAFF;
+	background-color: #00334D;
+}
+.jumbotron button:hover {
+
+}
 #site-title {
 	font-size: 4rem;
-	
 }
 #astronaut {
 	position: absolute;
