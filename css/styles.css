@@ -1,6 +1,25 @@
 
-
-
+html {
+	font-size: 18px;
+}
+.navbar {
+	height: 100px;
+}
+.navbar li a {
+	font-size: 1.2rem;
+}
+.fixed-nav {
+	position: fixed;
+    z-index: 99;
+    width: 100%;
+	padding:0;
+	opacity: 0.8;
+}
+.static-nav {
+	position: static;
+	height: 100px;
+	padding: -2rem;
+}
 /* Jumbotron */
 .jumbotron {
 	position: relative;
@@ -14,11 +33,16 @@
 	width: 100%;
 	margin-bottom: 0;
 	overflow: hidden;
-	text-align: center;
+	color: rgba(255,255,255,.5);
+
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    font-size: 4rem;
+	
+}
+#site-title {
+	font-size: 4rem;
 	
 }
 #astronaut {
@@ -99,4 +123,60 @@ footer a, footer p {
 }
 .black {
     color: #000;
+}
+/* FILTERS */
+.contrast150 {
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.5" intercept="-0.25" /><feFuncG type="linear" slope="1.5" intercept="-0.25" /><feFuncB type="linear" slope="1.5" intercept="-0.25" /></feComponentTransfer></filter></svg>#filter');
+	-webkit-filter: contrast(150%);
+	  filter: contrast(150%);
+	  border: 2px double  cornflowerblue;
+	  border-radius: 30px;
+}
+.sepia100 {
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.393 0.769 0.189 0 0 0.349 0.686 0.168 0 0 0.272 0.534 0.131 0 0 0 0 0 1 0" /></filter></svg>#filter');
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%);
+}
+.blur {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+.slow-spin {
+  -webkit-animation: fa-spin 4s infinite linear;
+  animation: fa-spin 4s infinite linear;
+}
+/* spin keyframes for Astronaught */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(50deg) ;
+  }
+}
+/* TYPED.JS */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

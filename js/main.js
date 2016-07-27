@@ -58,14 +58,15 @@ $(function() {
 
 // jumbotron 'typed' animated text
 	$("#site-title").typed({
-		strings: ["My name is <span class='text-primary'>Chris LaCaille</span>",
-			"I <span class='text-primary'>build</span> websites... ^600 and <span class='text-primary'>apps</span>",
-			"Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Click Here</a>" ],
+		strings: ["My name is <span class='blue-1'>Chris LaCaille</span>",
+			"I <span class='blue-1'>build</span> websites... ^600 and <span class='blue-1'>apps</span>",
+			"Check out my work!<br><button id='work-link' href='#recent-work-heading' class='btn btn-lg blue-1'>Click Here</button>" ],
 		typeSpeed: 11,
 		startDelay: 2000,
-		cursorChar: "loading...",
+		cursorChar: "",
 		callback: function() {
 			$(".typed-cursor").fadeOut();
+			$(this).find("h1").css( {"boxShadow": "2px 2px 3px black"} );
 			smoothScroll();
 		},
 	});
@@ -82,10 +83,11 @@ $(function() {
 		// Damper on 10 .. can change ... higher is slower
 		xp += (mouseX - xp) / 10;
 		yp += (mouseY - yp) / 10;
-		var stopY = $(window).height() - 200;
+		var yStopBottom = $(window).height() - 200,
+			xStopRight = ($window.width() - 150);
 		// Check to see if astronaught is within jumbotron
-		if ( xp > 50 && xp < ($window.width() - 150) && 
-			yp > 0 && yp < stopY ) 
+		if ( xp > 50 && xp < xStopRight && 
+			yp > 0 && yp < yStopBottom ) 
 		{
 			TweenLite.to($astronaut, 1.5, 
 						{ left:xp, top:yp, opacity: 1  });
@@ -97,18 +99,19 @@ $(function() {
 
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $navbar = $(".navbar");
+	var $navbar = $("nav");
+	var navHeight =  $("nav").offset().top;
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
-		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
-			$about_text.fadeIn(1000, function() {
-				$about_text2.fadeIn(2000);
-			});
-		}
-		if ( $window.scrollTop() > 20) {
-			$navbar.removeClass("navbar-static-top");
-			$navbar.addClass("navbar-fixed-top");
-
+		
+		if ( $window.scrollTop() > navHeight) {
+			$navbar.removeClass("static-nav").addClass("fixed-nav");
+			// TweenLite.to( $("nav") , {className: "+=fixed-nav"} );
+			// TweenLite.to( $("nav") , {className: "-=static-nav"} );
+		} else {
+			$navbar.removeClass("fixed-nav").addClass("static-nav");
+			// TweenLite.to( $("nav") , {className: "+=static-nav"} );
+			// TweenLite.to( $("nav") , {className: "-=fixed-nav"} );
 		}
 	});
 
