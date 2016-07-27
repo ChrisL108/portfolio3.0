@@ -62,7 +62,7 @@ $(function() {
 			"Check out my work!<br><button id='work-link' href='#recent-work-heading' class='btn btn-lg blue-1'>Click Here</button>" ],
 		typeSpeed: 11,
 		startDelay: 2000,
-		cursorChar: "",
+		cursorChar: "108.315.25.00 - Initializing",
 		callback: function() {
 			$(".typed-cursor").fadeOut();
 			smoothScroll();
