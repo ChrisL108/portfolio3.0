@@ -30,6 +30,11 @@ navbar-toggle {
 .navbar li {
 	display: inline-block;
 }
+@media (min-width: 40em) {
+	#myNavbar {
+		visibility: hidden;
+	}
+}
 /*STATIC navbar*/
 .static-nav {
 	position: static;

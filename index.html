@@ -7,7 +7,7 @@
 <meta name="keywords" content="chris lacaille, web, website, websites, web design, design, logo design, responsive, mobile, mobile, development, responsive, web development">
 <title>Web Design &amp; Development</title>
 <!--Bootstrap local-->
-<link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='css/bootstrap4.min.css' rel='stylesheet' type='text/css'>
 <!-- Bootstrap CDN -->
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">-->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -40,15 +40,35 @@
 
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#myNavbar">
+
+     <nav class="navbar navbar-light bg-faded">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+          &#9776;
+        </button>
+		<h1 class="navbar-brand display-2">Chris Lacaille<br><small class="text-muted title-meta">Front-End Developer</small></h1>
+        <div class="collapse navbar-toggleable-sm" id="navbar-header">
+			<ul class="nav navbar-nav pull-right text-sm-center">
+				<li class="nav-item">
+					<a href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a href="#recent-work-heading">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a  href="#contact-form">Contact</a>
+				</li>
+			</ul>
+        </div>
+      </nav> <!-- /navbar -->
+
+	  
+    <!--<div class="navbar-header">
+      <button type="button" class="navbar-toggle pull-right hidden-md-up" data-toggle="collapse" data-target="#myNavbar">
          &#9776;
       </button>
       <h1 class="navbar-brand pull-left display-2">Chris Lacaille<br><small class="text-muted title-meta">Front-End Developer</small></h1>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="hidden-md-down" id="myNavbar">
 		<ul class="nav navbar-nav pull-right">
 			<li class="nav-item">
 				<a href="#about">About</a>
@@ -62,23 +82,8 @@
 		</ul>
     </div>
   </div>
-</nav>
+</nav>-->
 
-	<!--<nav class="navbar navbar-dark bg-inverse">	   
-
-		<h1 class="navbar-brand pull-left display-2">Chris Lacaille<br><small class="text-muted title-meta">Front-End Developer</small></h1>
-		<ul class="nav navbar-nav pull-right">
-			<li class="nav-item">
-				<a href="#about">About</a>
-			</li>
-			<li class="nav-item">
-				<a href="#recent-work-heading">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a  href="#contact-form">Contact</a>
-			</li>
-		</ul>
-	</nav>-->
 
 	<!-- ~~~~~~~~~~~~~~~~~ Jumbotron -->
 	<div class="jumbotron jumbotron-fluid">
