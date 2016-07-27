@@ -56,7 +56,7 @@ $(function() {
 	smoothScroll();
 
 // jumbotron 'typed' animated text
-	$("#site-title").typed({
+	$("#jumbotron-text").typed({
 		strings: ["My name is <span class='blue-1'>Chris LaCaille</span>",
 			"I <span class='blue-1'>build</span> websites... ^600 and <span class='blue-1'>apps</span>",
 			"Check out my work!<br><button id='work-link' href='#recent-work-heading' class='btn btn-lg blue-1'>Click Here</button>" ],
@@ -65,7 +65,6 @@ $(function() {
 		cursorChar: "",
 		callback: function() {
 			$(".typed-cursor").fadeOut();
-			$(this).find("h1").css( {"boxShadow": "2px 2px 3px black"} );
 			smoothScroll();
 		},
 	});

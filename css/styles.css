@@ -27,14 +27,6 @@ navbar-toggle {
 	font-size: 1.5rem;
 	color: #00AAFF!important;
 }
-.navbar li {
-	display: inline-block;
-}
-@media (min-width: 40em) {
-	#myNavbar {
-		visibility: hidden;
-	}
-}
 /*STATIC navbar*/
 .static-nav {
 	position: static;
@@ -81,12 +73,19 @@ navbar-toggle {
 	color: #00AAFF;
 	background-color: #00334D;
 }
-.jumbotron button:hover {
+/*.jumbotron button:hover {
 
-}
-#site-title {
+}*/
+#jumbotron-text {
+	background-color: rgba(0, 51, 77, 0.36);
+	color: white;
+	padding: 2rem;
+	border: 1px inset #00AAFF;
+	border-radius: 10px;
 	font-size: 4rem;
+	margin: 1rem;
 }
+
 #astronaut {
 	position: absolute;
 	top: 200px;
@@ -222,3 +221,6 @@ footer a, footer p {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+
+/*@media screen and (max-width: 800px)*/
