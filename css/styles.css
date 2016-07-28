@@ -33,7 +33,7 @@ navbar-toggle {
 	color: #00AAFF!important;
 }
 .navbar li:hover {
-	background-color: black;
+	background-color: #00334D;
 }
 .navbar li a:hover {
     text-decoration: none;
@@ -99,8 +99,6 @@ navbar-toggle {
 	border-radius: 10px;
 	font-size: 4rem;
 	margin: 1rem;
-
-	
 	z-index: 2;
 }
 .jumbotron button {
@@ -152,7 +150,6 @@ navbar-toggle {
 	justify-content: center;
 	align-content: center;
 	flex-wrap: wrap;
-	font-family: 
 }
 .projects {
 	flex-grow: 1;
