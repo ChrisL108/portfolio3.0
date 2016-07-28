@@ -23,20 +23,20 @@ navbar-toggle {
 	padding: 1rem;
 	display: block;
 	font-size: 1.5rem;
-	color: #00AAFF!important;
+	color: #00AAFF;
 	
 }
 .navbar li {
 	background-color: #002233;
 }
-.navbar li:hover {
+/*.navbar li:hover {
 	background-color: #00334D;
-}
+}*/
 .navbar li a:hover {
     text-decoration: none;
 }
-.navbar-brand a:hover, .navbar-brand a {
-	color: #00AAFF;
+.navbar-brand a:hover, .navbar-brand a, .navbar li a:hover {
+	color: white;
 }
 
 /* FIXED navbar */
@@ -187,6 +187,11 @@ navbar-toggle {
 #projects-info-section {
 	border-bottom: 1px solid #00AAFF;
 	text-align: center;
+	background-color: rgba(0, 0, 0, 0.49);
+}
+#project-filler {
+	padding:2rem;
+	color: white;
 }
 /*projects wrapper*/
 .projects-info {
@@ -202,8 +207,11 @@ navbar-toggle {
 .project-pic {
 	align-content: flex-start;
 	color: #00AAFF;
-	flex-grow: 4;
 	
+	flex-grow: 4;
+}
+.project-pic img {
+	width: 25rem;
 }
 .project-description {
 	align-content: flex-end;

@@ -100,31 +100,15 @@ $(function() {
 		}
 	}, 75);
 
-	// ~~~~~~ WINDOW SCROLL events
-	$about_text.hide(); // hide text to fade in
-	$about_text2.hide(); // hide text to fade in
-
-	// #about text fade in on scroll
-	$window.on("scroll", function() {
-		// $(".nav-item").prop({"height": $nav.innerHeight});
-		if ( $window.scrollTop() > 100) {
-			$navbar.removeClass("static-nav").addClass("fixed-nav");
-			$titleMeta.fadeOut();
-		} else {
-			$titleMeta.fadeIn();
-			$navbar.removeClass("fixed-nav").addClass("static-nav");
-		}
-
-	});
-
 // Project navigation
 	var $projectTitles = $(".projects");
 	var $projects = $(".projects-info");
+	var $fillerMsg = $("#project-filler");
 	var $targetID;
 	$projects.hide();
-	$("#onepass").show().addClass("active");;
+	
 	$projectTitles.on("click", function() {
-		
+		$fillerMsg.slideUp();
 		$projects.innerHeight = $(window).innerHeight - 
 								$projectTitles.offset().top - 50;
 		// if a project is already selected
