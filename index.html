@@ -11,9 +11,10 @@
 <!-- Bootstrap CDN -->
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">-->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
- <!--<link href='https://fonts.googleapis.com/css?family=Cinzel:400,900' rel='stylesheet' type='text/css'>-->
- <!--<link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>BLEEDING-->
- <link href='https://fonts.googleapis.com/css?family=Sarpanch:700,900' rel='stylesheet' type='text/css'>
+<!--FONTS-->
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sarpanch:700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Exo:400,500,700' rel='stylesheet' type='text/css'>
 <!-- Custom -->
 <link rel="stylesheet" href="css/styles.css">
 
@@ -39,14 +40,14 @@
 </script>
 
 </head>
-<body>
+<body id="top">
 
 	<!--~~~~~~~~~~~NAVBAR-->
-	<nav class="navbar navbar-light bg-faded">
+	<nav class="navbar navbar-light bg-faded" id="navbar">
 		<button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
 			&#9776;
 		</button>
-		<h1 class="navbar-brand display-2">Chris LaCaille<br><small class="text-muted title-meta">Front-End Developer</small></h1>
+		<h1 class="navbar-brand display-2"><a href="#top">Chris LaCaille</a><br><small class="text-muted title-meta">Front-End Developer</small></h1>
 		<div class="collapse navbar-toggleable-sm" id="navbar-header">
 			<ul class="nav navbar-nav pull-right">
 				<li class="nav-item">
@@ -92,12 +93,44 @@
 			</h1>
 			<!--projects navbar-->
 			<div id="project-nav">
-				<div class="projects"><a id="onepass">OnePASS<br><small>Password App</small></a></div>
-				<div class="projects"><a id="source-weather">Source Weather<br><small>Weather App</small></a></div>
-				<div class="projects"><a id="cool-connect">Cool Connect<br><small>Messenger App</small></a></div>
-				<div class="projects"><a id="deafandhoh">DeafAndHoH<br><small>Non-Profit Website</small></a></div>
-				<div class="projects"><a id="central-concrete">Central Concrete Creations<br><small>Contractor Website</small></a></div>
+				<div class="projects">
+					<a id="onepass-title">OnePASS<br>
+					<small>Password App</small></a>
+					</div>
+				<div class="projects">
+					<a id="source-weather-title">Source Weather<br>
+					<small>Weather App</small></a>
+					</div>
+				<div class="projects">
+					<a id="cool-connect-title">Cool Connect<br>
+					<small>Messenger App</small></a>
+					</div>
+				<div class="projects">
+					<a id="deafandhoh-title">DeafAndHoH<br>
+					<small>Non-Profit Website</small></a>
+					</div>
+				<div class="projects">
+					<a id="central-concrete-title">Central Concrete Creations<br>
+					<small>Contractor Website</small></a>
+					</div>
 			</div> <!-- #project-nav -->
+			
+			<!--Projects Content-->
+			<div id="projects-info-section">
+				<div class="projects-info" id="onepass">
+					<div class="project-pic">
+						<h2>OnePASS - password manager</h2>
+						<img id="onepass-img" width="600" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+					</div>
+					<div class="project-description">
+						<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
+					</div>
+				</div>
+				<div class="projects-info" id="source-weather"></div>
+				<div class="projects-info" id="cool-connect"></div>
+				<div class="projects-info" id="deafandhoh"></div>
+				<div class="projects-info" id="central-concrete"></div>
+			</div> <!-- #projects-info-section-->
 
 			<h1 class="text-sm-center text-muted" style="height:500px;margin-top:50%;">This is where the projects section will go</h1>
 

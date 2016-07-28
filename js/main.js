@@ -102,7 +102,7 @@ $(function() {
 	// ~~~~~~ WINDOW SCROLL events
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	
+	var $projectNav = $("#project-nav");
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		
@@ -113,6 +113,7 @@ $(function() {
 			$titleMeta.fadeIn();
 			$navbar.removeClass("fixed-nav").addClass("static-nav");
 		}
+
 	});
 
 // Project images hover effect

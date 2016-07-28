@@ -1,8 +1,10 @@
 
 html, body {
 	font-size: 18px;
-	/*font-family: 'Cinzel', serif;*/
-	font-family: 'Sarpanch', sans-serif;
+	/*font-family: 'Inconsolata' ;*/
+	/*font-family: 'Sarpanch', sans-serif;*/
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-family: 'Exo', sans-serif;
 	/*font-weight: 700;*/
 	background-color: #002233;
 }
@@ -37,6 +39,9 @@ navbar-toggle {
 }
 .navbar li a:hover {
     text-decoration: none;
+}
+.navbar-brand a:hover {
+	color: #00AAFF;
 }
 /*STATIC navbar*/
 .static-nav {
@@ -143,7 +148,6 @@ navbar-toggle {
 	padding: 1rem;
 	text-shadow: 1px 1px 6px white;
 }
-
 #project-nav {
 	display: flex;
 	/*justify-content: center;*/
@@ -151,6 +155,7 @@ navbar-toggle {
 	align-content: center;
 	flex-wrap: wrap;
 }
+/*project navbar headings*/
 .projects {
 	flex-grow: 1;
 	justify-content: center;
@@ -187,6 +192,39 @@ navbar-toggle {
 		flex-grow: 2;
 	}
 }
+
+/* PROJECTS INFO Section*/
+#projects-info-section {
+	border-bottom: 1px solid #00AAFF;
+	text-align: center;
+}
+/*projects wrapper*/
+.projects-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 5rem;
+	line-height: 2rem;
+	/*font-family: 'Inconsolata' ;*/
+}
+.project-pic {
+	align-content: flex-start;
+	color: #005E8D;
+	flex-grow: 3;
+}
+.project-description {
+	align-content: flex-end;
+	color:white;
+	/*flex-grow: 1;*/
+	
+}
+#onepass-img {
+	border-radius: 10px;
+	border: 1px solid #00AAFF;
+}
+
 
 /* ~~~~~~~ FOOTER */
 footer {
