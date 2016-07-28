@@ -3,11 +3,7 @@
 
 $(function() {
 	// Jumbotron and #about section vars 
-	var $jumbotron = $(".jumbotron"),
-		// $about = $("#about"), 
-		$about_text = $("#about_text"),
-		$about_text2 = $("#about_text2"),
-		$projectImgs = $(".project-imgs");
+	var $jumbotron = $(".jumbotron");
 // Astronaut animation vars
 	var $astronaut = $("#astronaut"),
 		$window = $(window),
@@ -100,31 +96,47 @@ $(function() {
 		}
 	}, 75);
 
+	// ~~~~~~ WINDOW SCROLL events
+
+	// #about text fade in on scroll
+	$window.on("scroll", function() {
+		// $(".nav-item").prop({"height": $nav.innerHeight});
+		if ( $window.scrollTop() > 100) {
+			$navbar.removeClass("static-nav").addClass("fixed-nav");
+			$titleMeta.fadeOut();
+		} else {
+			$titleMeta.fadeIn();
+			$navbar.removeClass("fixed-nav").addClass("static-nav");
+		}
+
+	});
+
 // Project navigation
-	var $projectTitles = $(".projects");
-	var $projects = $(".projects-info");
-	var $fillerMsg = $("#project-filler");
-	var $targetID;
+	var $projectTitles = $(".projects"),
+		$projects = $(".projects-info"),
+		$fillerMsg = $("#project-filler"),
+		$targetID;
 	$projects.hide();
 	
 	$projectTitles.on("click", function() {
+		// hide filler msg
 		$fillerMsg.slideUp();
-		$projects.innerHeight = $(window).innerHeight - 
-								$projectTitles.offset().top - 50;
+
 		// if a project is already selected
 		if ($targetID) {
 			$targetID.stop(true).slideUp("slow");
 			$projectTitles.removeClass("active");
 		}
-		// add active class to selected project heading
-		$(this).addClass("active");
+		
 		// find project title id
 		var projectID = $(this).find("a").prop("id");
 		// remove '-title' to get project content id
 		var target = projectID.substring(0, projectID.length-6);
 		$targetID = $("#"+target);
 		$targetID.stop(true).slideDown("slow");
-
+		// add active class to selected project heading
+		$(this).addClass("active");
+		// move view to top of project links
 		$(window).scrollTop($projectTitles.offset().top - 50);
 	});
 

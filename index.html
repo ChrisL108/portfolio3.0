@@ -85,89 +85,124 @@
 
 
 	<!--PROJECTS-->
-			<!-- title -->
-			<h1 id="projects-title" class="text-xs-center display-2">
-					PR<i class="fa fa-globe fa-1x slow-spin" aria-hidden="true"></i>JECTS
-			</h1>
-			<!--projects navbar-->
-			<div id="project-nav">
-				<div class="projects">
-					<a id="onepass-title">OnePASS<br>
-					<small>Password App</small></a>
-					</div>
-				<div class="projects">
-					<a id="source-weather-title">Source Weather<br>
-					<small>Weather App</small></a>
-					</div>
-				<div class="projects">
-					<a id="cool-connect-title">Cool Connect<br>
-					<small>Messenger App</small></a>
-					</div>
-				<div class="projects">
-					<a id="deafandhoh-title">DeafAndHoH<br>
-					<small>Non-Profit Website</small></a>
-					</div>
-				<div class="projects">
-					<a id="central-concrete-title">Central Concrete Creations<br>
-					<small>Contractor Website</small></a>
-					</div>
-			</div> <!-- #project-nav -->
+	<!-- title -->
+	<h1 id="projects-title" class="text-xs-center display-2">
+			PR<i class="fa fa-globe fa-1x slow-spin" aria-hidden="true"></i>JECTS
+	</h1>
+	<!--projects navbar-->
+	<div id="project-nav">
+		<div class="projects">
+			<a id="onepass-title">OnePASS<br>
+			<small>Password App</small></a>
+			</div>
+		<div class="projects">
+			<a id="source-weather-title">Source Weather<br>
+			<small>Weather App</small></a>
+			</div>
+		<div class="projects">
+			<a id="cool-connect-title">Cool Connect<br>
+			<small>Messenger App</small></a>
+			</div>
+		<div class="projects">
+			<a id="deafandhoh-title">DeafAndHoH<br>
+			<small>Non-Profit Website</small></a>
+			</div>
+		<div class="projects">
+			<a id="central-concrete-title">Central Concrete Creations<br>
+			<small>Contractor Website</small></a>
+			</div>
+	</div> <!-- #project-nav -->
 			
-			<!--Projects Content-->
-			<div id="projects-info-section">
-				
-				<div class="projects-info" id="onepass">
-					<div class="project-pic">
-						<h2>OnePASS</h2>
-						<img id="onepass-img" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+	<!--Projects Content-->
+	<div id="projects-info-section">
+		
+		<div class="projects-info" id="onepass">
+			<div class="project-pic">
+				<h2>OnePASS</h2>
+				<img id="onepass-img" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+			</div>
+			<div class="project-description">
+				<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage.</p>
+				<a href="#">Go to OnePASS</a>
+			</div>
+		</div>
+		<div class="projects-info" id="source-weather">
+			<div class="project-pic">
+				<h2>Source Weather</h2>
+				<img id="onepass-img"  src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+			</div>
+			<div class="project-description">
+				<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
+				<a href="#">Go to OnePASS</a>
+			</div>
+		</div>
+		<div class="projects-info" id="cool-connect">
+			<div class="project-pic">
+				<h2>OnePASS - password manager</h2>
+				<img id="onepass-img" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+			</div>
+			<div class="project-description">
+				<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
+				<a href="#">Go to OnePASS</a>
+			</div>
+		</div>
+		<div class="projects-info" id="deafandhoh">
+			<div class="project-pic">
+				<h2>OnePASS - password manager</h2>
+				<img id="onepass-img" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+			</div>
+			<div class="project-description">
+				<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
+				<a href="#">Go to OnePASS</a>
+			</div>
+		</div>
+		<div class="projects-info" id="central-concrete">
+			<div class="project-pic">
+				<h2>OnePASS - password manager</h2>
+				<img id="onepass-img"" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+			</div>
+			<div class="project-description">
+				<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
+				<a href="#">Go to OnePASS</a>
+			</div>
+		</div>
+		<div id="project-filler">
+			<i class="fa fa-arrows-h fa-4x m-a-2" aria-hidden="true"></i>
+			<h2>Click a project to view.</h2>
+		</div>
+	</div> <!-- #projects-info-section-->
+
+<!--Contact Form-->
+	<div class="container-fluid text-xs-center" id="contact-form">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="display-4">Contact Me</h3>
+				<p class="font-italic"><small>If you would like to inquire about hiring me or just want to chat fill out this form!</small></p>
+
+				<form class="inline-form" action="mailer.php">
+					
+					<div class="form-group required">
+						<label class="control-label" for="name">Your name:</label>
+						<input id="userName" type="text" name="name" required><br class="hidden-md-up">
+						<label class="control-label" for="email">Email address:</label>
+						<input id="userEmail" type="email" name="email" required>
+
 					</div>
-					<div class="project-description">
-						<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
-						<a href="#">Go to OnePASS</a>
+
+					<div class="form-group required">
+						<label class="control-label" for="message">Message:</label>
+						<textarea id="userMsg" name="message"></textarea>
 					</div>
-				</div>
-				<div class="projects-info" id="source-weather">
-					<div class="project-pic">
-						<h2>Source Weather</h2>
-						<img id="onepass-img"  src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
+					<div class="form-group"> 
+						<input type="submit" class="btn btn-primary">
 					</div>
-					<div class="project-description">
-						<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
-						<a href="#">Go to OnePASS</a>
-					</div>
-				</div>
-				<div class="projects-info" id="cool-connect">
-					<div class="project-pic">
-						<h2>OnePASS - password manager</h2>
-						<img id="onepass-img" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
-					</div>
-					<div class="project-description">
-						<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
-						<a href="#">Go to OnePASS</a>
-					</div>
-				</div>
-				<div class="projects-info" id="deafandhoh">
-					<div class="project-pic">
-						<h2>OnePASS - password manager</h2>
-						<img id="onepass-img" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
-					</div>
-					<div class="project-description">
-						<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
-						<a href="#">Go to OnePASS</a>
-					</div>
-				</div>
-				<div class="projects-info" id="central-concrete">
-					<div class="project-pic">
-						<h2>OnePASS - password manager</h2>
-						<img id="onepass-img"" src="img/phone-images/onepass-in-hand-with-background.jpg" alt="">
-					</div>
-					<div class="project-description">
-						<p>OnePASS is a app that allows you to generate strong, unique passwords and save them to local storage</p>
-						<a href="#">Go to OnePASS</a>
-					</div>
-				</div>
-				<h2 id="project-filler">Click a project to view.</h2>
-			</div> <!-- #projects-info-section-->
+
+					<div id="form-messages"></div>
+				</form> <!-- contact-form -->
+			</div>
+
+		</div> <!-- row -->
+	</div> <!-- container -->
 
 			
 
