@@ -122,7 +122,13 @@ $(function() {
 	var $targetID;
 	$projects.hide();
 	$projectTitles.on("click", function() {
-		if ($targetID) $targetID.fadeOut();
+		// if a project is already selected
+		if ($targetID) {
+			$targetID.fadeOut().removeClass("active");
+			$projectTitles.removeClass("active");
+		}
+		// add active class to selected project heading
+		$(this).addClass("active");
 		var projectID = $(this).find("a").prop("id");
 		var target = projectID.substring(0, projectID.length-6);
 		$targetID = $("#"+target);
