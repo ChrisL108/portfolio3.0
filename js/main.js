@@ -36,9 +36,9 @@ $(function() {
 	resizeJumbo();
 	
 	// And re-size jumbotron when window size changes
-	$(window).resize(function() {
-		resizeJumbo();
-	});
+	// $(window).resize(function() {
+	// 	resizeJumbo();
+	// });
 // Smoother scrolling 
 // Not self-executing so it works on dynamic 'click here' button
 // in jumbotron - after typed runs
@@ -49,7 +49,7 @@ $(function() {
 				var $target = $(this.hash);
 				$target = $target.length && $target || $("[name=" + this.hash.slice(1) +"]");
 				if ($target.length) {
-					var targetOffset = $target.offset().top - 100;
+					var targetOffset = $target.offset().top - 150;
 					$("html,body").stop(true);
 					$("html,body").animate({scrollTop: targetOffset}, 1000);
 					return false;

@@ -85,11 +85,8 @@ navbar-toggle {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 1;
 	
-}
-.jumbotron button {
-	color: #00AAFF;
-	background-color: #00334D;
 }
 /*.jumbotron button:hover {
 
@@ -102,13 +99,19 @@ navbar-toggle {
 	border-radius: 10px;
 	font-size: 4rem;
 	margin: 1rem;
+
+	
+	z-index: 2;
 }
 .jumbotron button {
-	border: 1px outset gray;
+	color: #00AAFF;
+	background-color: #002233;
+	/*border: 2px outset gray;*/
 }
 .jumbotron button:hover {
 	/*color : white;*/
-	border: 2px solid gray;
+	/*border: 1px outset gray;*/
+	box-shadow: 0 0 10px gray;
 }
 
 #astronaut {
@@ -120,6 +123,8 @@ navbar-toggle {
 	-moz-animation:    spin 8s infinite alternate; 
 	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate;
+	
+	z-index: -1;
 }
 
 /* ~~~~~ WHAT-I-DO */
