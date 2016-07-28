@@ -63,7 +63,7 @@ $(function() {
 	$("#jumbotron-text").typed({
 		strings: ["My name is <span class='blue-1'>Chris LaCaille</span>",
 			"I <span class='blue-1'>build</span> websites... ^600 and <span class='blue-1'>apps</span>",
-			"Check out my work!<br><button id='work-link' href='#projects-title' class='btn btn-lg blue-1'>Click Here</button>" ],
+			"Check out my work!<br><a href='#projects-title' class='btn btn-lg blue-1'>Click Here</a>" ],
 		typeSpeed: 11,
 		startDelay: 2000,
 		cursorChar: "108.315.25.00 - Initializing",

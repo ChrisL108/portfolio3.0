@@ -101,15 +101,13 @@ navbar-toggle {
 	margin: 1rem;
 	z-index: 2;
 }
-.jumbotron button {
-	color: #00AAFF;
+.jumbotron a {
 	background-color: #002233;
-	/*border: 2px outset gray;*/
+	border: 3px inset gray;
 }
-.jumbotron button:hover {
-	/*color : white;*/
-	/*border: 1px outset gray;*/
-	box-shadow: 0 0 10px gray;
+.jumbotron a:hover {
+	color:#00AAFF;
+	border: 1px inset gray;
 }
 
 #astronaut {
@@ -167,7 +165,7 @@ navbar-toggle {
 .projects:hover {
 	background-color: #00334D;
 	cursor: crosshair;
-	flex-grow: 2;
+	/*flex-grow: 2;*/
 	border-right: 5px solid #00AAFF;
 	border-left: 5px solid #00AAFF;
 }
