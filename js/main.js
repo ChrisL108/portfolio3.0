@@ -21,6 +21,9 @@ $(function() {
 		$userEmail = $("#userEmail"),
 		$userMsg = $("#userMsg"),
 		$formMessages = $("#form-messages");
+	// Navbar vars
+	var $navbar = $("nav"),
+		$titleMeta = $(".title-meta");
 
 	
 	// Change jumbotron to fit to viewport width/height
@@ -46,7 +49,8 @@ $(function() {
 				var $target = $(this.hash);
 				$target = $target.length && $target || $("[name=" + this.hash.slice(1) +"]");
 				if ($target.length) {
-					var targetOffset = $target.offset().top;
+					var targetOffset = $target.offset().top - 100;
+					$("html,body").stop(true);
 					$("html,body").animate({scrollTop: targetOffset}, 1000);
 					return false;
 				}
@@ -59,7 +63,7 @@ $(function() {
 	$("#jumbotron-text").typed({
 		strings: ["My name is <span class='blue-1'>Chris LaCaille</span>",
 			"I <span class='blue-1'>build</span> websites... ^600 and <span class='blue-1'>apps</span>",
-			"Check out my work!<br><button id='work-link' href='#recent-work-heading' class='btn btn-lg blue-1'>Click Here</button>" ],
+			"Check out my work!<br><button id='work-link' href='#projects-title' class='btn btn-lg blue-1'>Click Here</button>" ],
 		typeSpeed: 11,
 		startDelay: 2000,
 		cursorChar: "108.315.25.00 - Initializing",
@@ -98,8 +102,7 @@ $(function() {
 	// ~~~~~~ WINDOW SCROLL events
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $navbar = $("nav"),
-		$titleMeta = $(".title-meta");
+	
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		
