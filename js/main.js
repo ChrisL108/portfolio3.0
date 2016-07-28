@@ -49,7 +49,8 @@ $(function() {
 				var $target = $(this.hash);
 				$target = $target.length && $target || $("[name=" + this.hash.slice(1) +"]");
 				if ($target.length) {
-					var targetOffset = $target.offset().top - 150;
+					var navOffset = $(window).scrollTop() == 0 ?  150 : 50;
+					var targetOffset = $target.offset().top - navOffset;
 					$("html,body").stop(true);
 					$("html,body").animate({scrollTop: targetOffset}, 1000);
 					return false;
@@ -122,17 +123,20 @@ $(function() {
 	var $targetID;
 	$projects.hide();
 	$projectTitles.on("click", function() {
+		$(window).scrollTop($projectTitles.offset().top - 50);
 		// if a project is already selected
 		if ($targetID) {
-			$targetID.fadeOut().removeClass("active");
+			$targetID.fadeOut();
 			$projectTitles.removeClass("active");
 		}
 		// add active class to selected project heading
 		$(this).addClass("active");
+		// find project title id
 		var projectID = $(this).find("a").prop("id");
+		// remove '-title' to get project content id
 		var target = projectID.substring(0, projectID.length-6);
 		$targetID = $("#"+target);
-		$("#"+target).fadeIn();
+		$targetID.fadeIn();
 	});
 
 // Contact form - AJAX
