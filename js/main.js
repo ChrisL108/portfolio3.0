@@ -106,7 +106,7 @@ $(function() {
 
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
-		
+		// $(".nav-item").prop({"height": $nav.innerHeight});
 		if ( $window.scrollTop() > 100) {
 			$navbar.removeClass("static-nav").addClass("fixed-nav");
 			$titleMeta.fadeOut();
@@ -124,9 +124,11 @@ $(function() {
 	$projects.hide();
 	$projectTitles.on("click", function() {
 		$(window).scrollTop($projectTitles.offset().top - 50);
+		$projects.innerHeight = $(window).innerHeight - 
+								$projectTitles.offset().top - 50;
 		// if a project is already selected
 		if ($targetID) {
-			$targetID.fadeOut();
+			$targetID.slideUp("slow");
 			$projectTitles.removeClass("active");
 		}
 		// add active class to selected project heading
@@ -136,7 +138,7 @@ $(function() {
 		// remove '-title' to get project content id
 		var target = projectID.substring(0, projectID.length-6);
 		$targetID = $("#"+target);
-		$targetID.fadeIn();
+		$targetID.slideDown("slow");
 	});
 
 // Contact form - AJAX

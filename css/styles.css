@@ -16,11 +16,6 @@ html, body {
 	color: #00AAFF;
 	margin:0;
 	padding: 0;
-	overflow: visible;
-	/*display: flex;*/
-	-webkit-transition: height 1000 ease;
-	-moz-transition: height 1000 ease;
-	transition: height 1000 ease;
 }
 navbar-toggle {
 	background-color:#00AAFF; 
@@ -32,6 +27,10 @@ navbar-toggle {
 	display: block;
 	font-size: 1.5rem;
 	color: #00AAFF!important;
+	
+}
+.navbar li {
+	background-color: #002233;
 }
 .navbar li:hover {
 	background-color: #00334D;
