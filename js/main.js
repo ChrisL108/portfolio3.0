@@ -102,7 +102,7 @@ $(function() {
 	// ~~~~~~ WINDOW SCROLL events
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $projectNav = $("#project-nav");
+
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		
@@ -116,12 +116,17 @@ $(function() {
 
 	});
 
-// Project images hover effect
-	$projectImgs.on("mouseover", function() {
-		TweenLite.set($(this), {className: "+=contrast150"});
-	});
-	$projectImgs.on("mouseleave", function() {
-		TweenLite.set($(this), {className: "-=contrast150"});
+// Project navigation
+	var $projectTitles = $(".projects");
+	var $projects = $(".projects-info");
+	var $targetID;
+	$projects.hide();
+	$projectTitles.on("click", function() {
+		if ($targetID) $targetID.fadeOut();
+		var projectID = $(this).find("a").prop("id");
+		var target = projectID.substring(0, projectID.length-6);
+		$targetID = $("#"+target);
+		$("#"+target).fadeIn();
 	});
 
 // Contact form - AJAX

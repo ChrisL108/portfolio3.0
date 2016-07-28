@@ -150,9 +150,6 @@ navbar-toggle {
 }
 #project-nav {
 	display: flex;
-	/*justify-content: center;*/
-	/*justify-content: space-around;*/
-	align-content: center;
 	flex-wrap: wrap;
 }
 /*project navbar headings*/
@@ -162,16 +159,18 @@ navbar-toggle {
 	align-content: center;
 	text-align: center;
 	border: 1px solid #00334D;
+	line-height: 2rem;
+	padding-top: 0.8rem;
 }
 .projects a {
 	font-size: 1.5rem;
 	padding:0.5rem;
+	
 }
 
-.projects:hover {
+.projects:hover, .projects.active {
 	background-color: #00334D;
 	cursor: crosshair;
-	/*flex-grow: 2;*/
 	border-right: 5px solid #00AAFF;
 	border-left: 5px solid #00AAFF;
 }
@@ -181,6 +180,7 @@ navbar-toggle {
 .projects small {
 	color: gray;
 	font-size: 0.8rem;
+	
 	padding:0;
 }
 /*Project section - media queries*/
