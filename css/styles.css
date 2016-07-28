@@ -134,6 +134,7 @@ navbar-toggle {
     border-bottom: 2px solid gray; 
     border-top: 2px solid gray;
     height:800px;
+	opacity: .2;
 }
 
 /* ~~~~~ PROJECTS*/
