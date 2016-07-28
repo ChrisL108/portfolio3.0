@@ -35,15 +35,10 @@ navbar-toggle {
 .navbar li a:hover {
     text-decoration: none;
 }
-.navbar-brand a:hover {
+.navbar-brand a:hover, .navbar-brand a {
 	color: #00AAFF;
 }
-/*STATIC navbar*/
-.static-nav {
-	position: static;
-	height: 100px;
-	padding: -2rem;
-}
+
 /* FIXED navbar */
 .fixed-nav {
 	position: fixed;
@@ -56,7 +51,7 @@ navbar-toggle {
 .fixed-nav .navbar-brand {
 	padding: 0.5rem;
 }
-.fixed-nav ul li {
+.fixed-nav ul li a {
 	height: 50px;
 }
 .fixed-nav ul li a {

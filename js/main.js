@@ -122,13 +122,14 @@ $(function() {
 	var $projects = $(".projects-info");
 	var $targetID;
 	$projects.hide();
+	$("#onepass").show().addClass("active");;
 	$projectTitles.on("click", function() {
-		$(window).scrollTop($projectTitles.offset().top - 50);
+		
 		$projects.innerHeight = $(window).innerHeight - 
 								$projectTitles.offset().top - 50;
 		// if a project is already selected
 		if ($targetID) {
-			$targetID.slideUp("slow");
+			$targetID.stop(true).slideUp("slow");
 			$projectTitles.removeClass("active");
 		}
 		// add active class to selected project heading
@@ -138,7 +139,9 @@ $(function() {
 		// remove '-title' to get project content id
 		var target = projectID.substring(0, projectID.length-6);
 		$targetID = $("#"+target);
-		$targetID.slideDown("slow");
+		$targetID.stop(true).slideDown("slow");
+
+		$(window).scrollTop($projectTitles.offset().top - 50);
 	});
 
 // Contact form - AJAX
