@@ -146,7 +146,8 @@ navbar-toggle {
 
 #project-nav {
 	display: flex;
-	justify-content: center;
+	/*justify-content: center;*/
+	/*justify-content: space-around;*/
 	align-content: center;
 	flex-wrap: wrap;
 }
