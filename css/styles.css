@@ -127,7 +127,7 @@ navbar-toggle {
 	z-index: -1;
 }
 
-/* ~~~~~ WHAT-I-DO */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ WHAT-I-DO */
 #what-i-do {
 	color: gray;
 	background: -webkit-radial-gradient(black, #00334D);
@@ -161,17 +161,6 @@ navbar-toggle {
 	text-decoration: none !important;
 	margin-top: 1rem;
 }
-#languages, #languages-title {
-	flex: 0 1 100%;
-	text-align: center;
-	margin-top: 4rem;
-}
-#languages img {
-	height: auto;
-	margin: 1rem 3rem;
-	margin-bottom: 10rem;
-	flex-shrink: 1;
-}
 .skills {
 	height:370px;
 	width: 370px;
@@ -179,12 +168,19 @@ navbar-toggle {
 	border-radius: 100%;
 	align-content: center;
 	padding: 3rem;
-	margin: 2rem;
+	margin: 1rem;
 	text-align: center;
 	align-items: center;
 	justify-content: space-around;
 	flex-shrink: 2;
 }
+/*#svgContainer { 
+	z-index: -10;
+	position:absolute;
+	background-color:silver;
+	opacity: 0.5;
+}*/
+
 .skills i {
 	color: #00AAFF;
 }
@@ -192,10 +188,22 @@ navbar-toggle {
 	margin: 1rem;
 	color: white;
 }
-.skill-description {
-
+#languages, #languages-title {
+	flex: 0 1 100%;
+	text-align: center;
+	margin-top: 4rem;
 }
-
+#languages img {
+	margin: 1rem 3rem;
+	margin-bottom: 10rem;
+	flex-shrink: 1;
+}
+@media (max-width: 865px) {
+	#languages img {
+		margin: 0 3rem;
+		margin-bottom: 1rem;
+	}
+}
 /* ~~~~~ PROJECTS*/
 #projects-title {
 	color:#002233;
@@ -282,6 +290,7 @@ navbar-toggle {
 .project-pic img {
 	width: 25rem;
 }
+
 /*Projects right-side*/
 .project-description {
 	align-content: flex-end;

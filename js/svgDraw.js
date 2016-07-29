@@ -79,7 +79,7 @@ function connectAll() {
     // connectElements($("#svg1"), $("#path4"), $("#red"),    $("#aqua")  ); 
     // connectElements($("#svg1"), $("#path5"), $("#purple"), $("#teal")  );
     // connectElements($("#svg1"), $("#path6"), $("#orange"), $("#green") );
-    connectElements($("#svg1"), $("#path1"), $("#userName"), $("#userEmail") );
+    connectElements($("#svg1"), $("#path1"), $("#skill-1"), $("#uskill-2") );
     connectElements($("#svg1"), $("#path1"), $("#skill-2"), $("#skill-3") );
 
 }
