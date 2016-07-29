@@ -102,6 +102,12 @@ navbar-toggle {
 	font-weight: 400;
 	margin: 1rem;
 	z-index: 2;
+	text-align: center;
+}
+@media (max-width: 900px) {
+	#jumbotron-text { 
+		font-size: 2rem;
+	}
 }
 .jumbotron a {
 	color:#00AAFF;
@@ -136,7 +142,6 @@ navbar-toggle {
     border-bottom: 3px solid white; 
     border-top: 3px solid white;
 	padding: 2rem 1rem;
-    /*height:50rem;*/
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -153,9 +158,10 @@ navbar-toggle {
 	padding: 5rem;
 
 }
-#languages-title h1, #about-title h1 {
-	font-weight: 700;
-	text-decoration: underline;
+#languages-title h1, #about-title-heading {
+    font-weight: 700;
+    color: #a3a3a3;
+    text-shadow: 0px -6px 0px black;
 }
 #about-title p {
 	text-decoration: none !important;
@@ -193,23 +199,37 @@ navbar-toggle {
 	margin: 1rem;
 	color: white;
 }
+/*MEDIA QUERIES for SKILLS*/
 @media (max-width: 950px) {
 	.skills {
 		border:none;
-		padding: 0;
+		padding: 0.1rem;
 		margin: 0;
+		height: auto;
+	}
+	#about-title-heading, #languages-title h1 {
+		font-size: 3rem;
+	}
+	#what-i-do {
+		font-size: 0.9rem;
+		margin: 0;
+		padding: 0.4rem;
 	}
 }
+/*@media (max-width: 950px) {
+
+}*/
 #languages, #languages-title {
 	flex: 0 1 100%;
 	text-align: center;
-	margin-top: 4rem;
+	margin: 2rem;
 }
 #languages img {
 	margin: 1rem 3rem;
 	margin-bottom: 10rem;
 	flex-shrink: 1;
 }
+/*MEDIA QUERIES for LANGUAGES*/
 @media (max-width: 865px) {
 	#languages img {
 		margin: 0 3rem;
@@ -298,18 +318,27 @@ navbar-toggle {
 .project-pic {
 	align-content: flex-start;
 	color: #00AAFF;
-	
-	flex-grow: 4;
 }
 /*projects images*/
 .project-pic img {
-	width: 15rem;
+	width: 25rem;
+	border: 1px solid #00AAFF;
 }
-@media (min-width: 705px) {
-	.project-pic img {
-		width: 25rem;
-		margin:2rem;
+@media (max-width: 950px) {
+	#projects-title {
+		padding:0.5rem;
+		font-size: 2rem;
 	}
+	.projects a {
+		font-size: 1rem;
+		flex-shrink: 3;
+	}
+	.project-description, .project-pic {
+		font-size: 1rem;
+	}
+	/*.project-pic img {
+		width:18rem;
+	}*/
 }
 /*Projects right-side*/
 .project-description {
@@ -317,11 +346,7 @@ navbar-toggle {
 	color:white;
 	font-size: 1.2rem;
 	flex-grow: 1;
-	
-}
-#onepass-img {
-	border-radius: 10px;
-	border: 1px solid #00AAFF;
+
 }
 
 /*Contact Form*/
