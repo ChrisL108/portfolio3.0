@@ -130,9 +130,9 @@ navbar-toggle {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ WHAT-I-DO */
 #what-i-do {
 	color: gray;
-	background: -webkit-radial-gradient(black, #00334D);
-	background: -o-radial-gradient(black, #00334D);
-	background: radial-gradient(black, #00334D);
+	background: -webkit-radial-gradient(#434343, #010406);
+	background: -o-radial-gradient(#434343, #010406);
+	background: radial-gradient(#434343, #010406);
     border-bottom: 3px solid white; 
     border-top: 3px solid white;
 	padding: 2rem 1rem;
@@ -182,7 +182,12 @@ navbar-toggle {
 }*/
 
 .skills i {
+	color: #005E8D;
+	text-shadow: 2px 2px 4px #000;
+}
+.skills:hover i {
 	color: #00AAFF;
+	text-shadow: 2px 2px 4px #002233;
 }
 .skill-title {
 	margin: 1rem;
@@ -223,7 +228,9 @@ navbar-toggle {
 	justify-content: center;
 	align-content: center;
 	text-align: center;
+
 	border: 1px solid #00334D;
+	border-bottom: 5px solid #005E8D;
 	line-height: 2rem;
 	padding-top: 0.8rem;
 }
@@ -306,7 +313,8 @@ navbar-toggle {
 
 /*Contact Form*/
 #contact-form {
-	color: #005E8D;
+	color: #00AAFF;
+	background: -webkit-linear-gradient(#00334D, #002233)
 }
 
 
@@ -357,14 +365,14 @@ footer a, footer p {
 #contact-form label {
 	padding: 1rem;
 }
-#contact-form input {
+#contact-form input, #contact-form textarea {
     background-color: #37424c;
-    border: 1px outset #9ee4e4;
+    border: 1px outset #005E8D;
     color: lightgray;
 }
-#contact-form input:hover {
+#contact-form input:hover, #contact-form textarea:hover {
 	background-color: #333e47;
-    border: 1px solid #9ee4e4;
+    border: 1px solid #00AAFF;
 }
 .form-group.required .control-label:after { 
     color: #d00;

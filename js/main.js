@@ -35,9 +35,10 @@ $(function() {
 	// $(window).resize(function() {
 	// 	resizeJumbo();
 	// });
-// Smoother scrolling 
-// Not self-executing so it works on dynamic 'click here' button
-// in jumbotron - after typed runs
+	
+	// Smoother scrolling 
+	// Not self-executing so it works on dynamic 'click here' button
+	// in jumbotron - after typed runs
 	function smoothScroll() {
 		$("a[href*=#]").click(function() {
 			if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && 
