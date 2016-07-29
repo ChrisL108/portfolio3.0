@@ -130,22 +130,80 @@ navbar-toggle {
 /* ~~~~~ WHAT-I-DO */
 #what-i-do {
 	color: gray;
-	background: -webkit-linear-gradient(bottom, #002233, #000000);
-	background: -o-linear-gradient(bottom, #002233, #000000);
-	background: linear-gradient(bottom, #002233, #000000);
-    border-bottom: 2px solid gray; 
-    border-top: 2px solid gray;
-    height:800px;
-	opacity: .2;
+	background: -webkit-radial-gradient(black, #00334D);
+	background: -o-radial-gradient(black, #00334D);
+	background: radial-gradient(black, #00334D);
+    border-bottom: 3px solid white; 
+    border-top: 3px solid white;
+	padding: 2rem 1rem;
+    /*height:50rem;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+}
+#about-title {
+	flex: 0 1 100%;
+	align-content: center;
+	align-self: center;
+	justify-content: center;
+	text-align: center;
+	padding: 5rem;
+
+}
+#languages-title h1, #about-title h1 {
+	font-weight: 700;
+	text-decoration: underline;
+}
+#about-title p {
+	text-decoration: none !important;
+	margin-top: 1rem;
+}
+#languages, #languages-title {
+	flex: 0 1 100%;
+	text-align: center;
+	margin-top: 4rem;
+}
+#languages img {
+	height: auto;
+	margin: 1rem 3rem;
+	margin-bottom: 10rem;
+	flex-shrink: 1;
+}
+.skills {
+	height:370px;
+	width: 370px;
+	border: 5px solid #00AAFF;
+	border-radius: 100%;
+	align-content: center;
+	padding: 3rem;
+	margin: 2rem;
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+	flex-shrink: 2;
+}
+.skills i {
+	color: #00AAFF;
+}
+.skill-title {
+	margin: 1rem;
+	color: white;
+}
+.skill-description {
+
 }
 
 /* ~~~~~ PROJECTS*/
 #projects-title {
 	color:#002233;
 	background-color: #00334D;
+	padding: 5rem 0;
 	margin: 0;
-	padding: 1rem;
 	text-shadow: 1px 1px 6px white;
+	font-weight: 700;
 }
 #project-nav {
 	display: flex;
@@ -170,8 +228,7 @@ navbar-toggle {
 .projects:hover, .projects.active {
 	background-color: #00334D;
 	cursor: crosshair;
-	border-right: 5px solid #00AAFF;
-	border-left: 5px solid #00AAFF;
+	border-bottom: 5px solid #00AAFF;
 }
 .projects:hover a, .projects.active a {
 	color:#00AAFF;
@@ -320,6 +377,9 @@ footer a, footer p {
 }
 .black {
     color: #000;
+}
+.white {
+	color:white;
 }
 a:hover, a:focus,
 a:active, a:focus {
