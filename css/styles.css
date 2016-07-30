@@ -87,9 +87,17 @@ navbar-toggle {
 	color: rgba(255,255,255,.5);
 	font-weight: 900;
 
+	display: -webkit-box;
+
+	display: -ms-flexbox;
+
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	z-index: 1;
 	
 }
@@ -130,8 +138,6 @@ navbar-toggle {
 	left: 250px;
 	width: 150px;
 	-webkit-animation: spin 8s infinite alternate; 
-	-moz-animation:    spin 8s infinite alternate; 
-	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate;
 	
 	z-index: -1;
@@ -141,23 +147,38 @@ navbar-toggle {
 #what-i-do {
 	color: gray;
 	background: -webkit-radial-gradient(#434343, #010406);
-	background: -o-radial-gradient(#434343, #010406);
 	background: radial-gradient(#434343, #010406);
     border-bottom: 3px solid white; 
     border-top: 3px solid white;
 	padding: 2rem 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-content: center;
-	align-items: center;
-	justify-content: space-around;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 #about-title {
-	flex: 0 1 100%;
-	align-content: center;
-	align-self: center;
-	justify-content: center;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 100%;
+	        flex: 0 1 100%;
+	-ms-flex-line-pack: center;
+	    align-content: center;
+	-ms-flex-item-align: center;
+	    align-self: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	text-align: center;
 	padding: 5rem;
 
@@ -176,13 +197,19 @@ navbar-toggle {
 	width: 370px;
 	border: 5px solid #00AAFF;
 	border-radius: 100%;
-	align-content: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	padding: 3rem;
 	margin: 1rem;
 	text-align: center;
-	align-items: center;
-	justify-content: space-around;
-	flex-shrink: 2;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	            -ms-grid-row-align: center;
+	        align-items: center;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+	-ms-flex-negative: 2;
+	    flex-shrink: 2;
 }
 /*#svgContainer { 
 	z-index: -10;
@@ -224,14 +251,17 @@ navbar-toggle {
 
 }*/
 #languages, #languages-title {
-	flex: 0 1 100%;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 100%;
+	        flex: 0 1 100%;
 	text-align: center;
 	margin: 2rem;
 }
 #languages img {
 	margin: 1rem 3rem;
 	margin-bottom: 10rem;
-	flex-shrink: 1;
+	-ms-flex-negative: 1;
+	    flex-shrink: 1;
 }
 /*MEDIA QUERIES for LANGUAGES*/
 @media (max-width: 865px) {
@@ -250,14 +280,22 @@ navbar-toggle {
 	font-weight: 700;
 }
 #project-nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 /*project navbar headings*/
 .projects {
-	flex-grow: 1;
-	justify-content: center;
-	align-content: center;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	text-align: center;
 
 	border: 1px solid #00334D;
@@ -292,7 +330,9 @@ navbar-toggle {
 		font-size: 3rem;
 	}
 	.projects {
-		flex-grow: 2;
+		-webkit-box-flex: 2;
+		    -ms-flex-positive: 2;
+		        flex-grow: 2;
 	}
 }
 
@@ -309,10 +349,17 @@ navbar-toggle {
 }
 /*projects wrapper*/
 .projects-info {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	height: 100%;
 	padding: 5rem;
 	line-height: 2rem;
@@ -320,7 +367,8 @@ navbar-toggle {
 }
 /*Projects left-side*/
 .project-pic {
-	align-content: flex-start;
+	-ms-flex-line-pack: start;
+	    align-content: flex-start;
 	color: #00AAFF;
 }
 /*projects images*/
@@ -335,7 +383,8 @@ navbar-toggle {
 	}
 	.projects a {
 		font-size: 1rem;
-		flex-shrink: 3;
+		-ms-flex-negative: 3;
+		    flex-shrink: 3;
 	}
 	.project-description, .project-pic {
 		font-size: 1rem;
@@ -349,10 +398,13 @@ navbar-toggle {
 }
 /*Projects right-side*/
 .project-description {
-	align-content: flex-end;
+	-ms-flex-line-pack: end;
+	    align-content: flex-end;
 	color:white;
 	font-size: 1.2rem;
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 
 }
 
@@ -366,9 +418,15 @@ navbar-toggle {
 #contact-form {
 
 	height: 45rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 
 }
 /*title*/
@@ -410,8 +468,11 @@ footer a, footer p {
 	padding: 1rem;
 }
 #social-list li {
-	align-self: center;
+	-ms-flex-item-align: center;
+	    align-self: center;
 	list-style: none;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
 	display: inline-flex;
 	padding: .75rem .50rem;
 }
@@ -469,22 +530,38 @@ a:active, a:focus {
   animation: fa-spin 4s infinite linear;
 }
 /* spin keyframes for Astronaught */
-@keyframes spin {
+@-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   30% {
-    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
   }
   100% {
-    transform: rotate(50deg) ;
+    -webkit-transform: rotate(50deg) ;
+            transform: rotate(50deg) ;
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  100% {
+    -webkit-transform: rotate(50deg) ;
+            transform: rotate(50deg) ;
   }
 }
 /* TYPED.JS */
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
 @keyframes blink{
@@ -493,11 +570,6 @@ a:active, a:focus {
     100% { opacity:1; }
 }
 @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
