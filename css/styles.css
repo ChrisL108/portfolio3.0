@@ -336,9 +336,12 @@ navbar-toggle {
 	.project-description, .project-pic {
 		font-size: 1rem;
 	}
-	/*.project-pic img {
-		width:18rem;
-	}*/
+	
+}
+@media (max-width: 950px) {
+	.project-pic img {
+		width:15rem;
+	}
 }
 /*Projects right-side*/
 .project-description {
