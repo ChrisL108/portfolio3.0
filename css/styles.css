@@ -60,10 +60,9 @@ navbar-toggle {
 	margin:0;
 	font-size: 1.2rem;
 }
-.navbar-toggler {
-	padding:0;
-	border: 1px solid white;
-	margin: 5px;
+
+.collapse {
+	background-color: #002233;
 }
 /*@media screen only (max-width)*/
 
