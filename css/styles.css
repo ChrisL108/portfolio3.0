@@ -64,8 +64,13 @@ navbar-toggle {
 .collapse {
 	background-color: #002233;
 }
-/*@media screen only (max-width)*/
-
+@media (max-width:600px) {
+    .navbar-nav .nav-item a {
+		text-align: center;
+		font-size: .8rem;
+	}
+}
+	
 /* Jumbotron */
 .jumbotron {
 	position: relative;
@@ -357,32 +362,6 @@ navbar-toggle {
 	background: -webkit-linear-gradient(#00334D, #002233)
 }
 
-
-/* ~~~~~~~ FOOTER */
-footer {
-    background-color: #282828;
-    padding: 1rem;
-}
-footer a, footer p {
-	color: gray;
-	text-decoration: none;
-	font-size: 1.3rem;
-	padding: 1rem;
-}
-#social-list li {
-	align-self: center;
-	list-style: none;
-	display: inline-flex;
-	padding: .75rem .50rem;
-}
-#social-list li a {
-	color: gray;
-}
-#social-list li a:hover,#social-list li a:active,
-#social-list li a:visited {
-	color: black;
-}
-
 /*FORM*/
 #contact-form {
 
@@ -417,6 +396,31 @@ footer a, footer p {
 .form-group.required .control-label:after { 
     color: #d00;
     content: "*";
+}
+
+/* ~~~~~~~ FOOTER */
+footer {
+    background-color: #282828;
+    padding: 1rem;
+}
+footer a, footer p {
+	color: gray;
+	text-decoration: none;
+	font-size: 1.3rem;
+	padding: 1rem;
+}
+#social-list li {
+	align-self: center;
+	list-style: none;
+	display: inline-flex;
+	padding: .75rem .50rem;
+}
+#social-list li a {
+	color: gray;
+}
+#social-list li a:hover,#social-list li a:active,
+#social-list li a:visited {
+	color: black;
 }
 
 /* Color Scheme profile colors for chrislacaille.com */

@@ -1,6 +1,21 @@
 // By: Chris LaCaille
 // ~~ My javascript/jquery code for portfolio page - chrislacaille.com
 
+$(window).on("load", function() {
+	// jumbotron 'typed' animated text
+	$("#jumbotron-text").typed({
+		strings: ["My name is <span class='blue-1'>Chris LaCaille</span>",
+			"I <span class='blue-1'>build</span> websites... ^600 and <span class='blue-1'>apps</span>",
+			"Check out my work!" ],
+		typeSpeed: 11,
+		startDelay: 2000,
+		cursorChar: "108.315.25.00 - Initializing",
+		callback: function() {
+			$(".typed-cursor").fadeOut();
+			window.smoothScroll();
+		},
+	});
+});
 $(function() {
 	// Jumbotron and #about section vars 
 	var $jumbotron = $(".jumbotron");
@@ -57,19 +72,6 @@ $(function() {
 	}
 	smoothScroll();
 
-// jumbotron 'typed' animated text
-	$("#jumbotron-text").typed({
-		strings: ["My name is <span class='blue-1'>Chris LaCaille</span>",
-			"I <span class='blue-1'>build</span> websites... ^600 and <span class='blue-1'>apps</span>",
-			"Check out my work!<br><a href='#projects-title' class='btn btn-lg blue-1'>Click Here</a>" ],
-		typeSpeed: 11,
-		startDelay: 2000,
-		cursorChar: "108.315.25.00 - Initializing",
-		callback: function() {
-			$(".typed-cursor").fadeOut();
-			smoothScroll();
-		},
-	});
 
 // jumbotron mouse events
 	$jumbotron.mousemove( function(e) {
