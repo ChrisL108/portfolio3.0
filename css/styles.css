@@ -26,16 +26,23 @@ html, body {
 	text-align: center;
 }
 #nav-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 #nav-list li {
-	flex: 1 1 auto;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
 	list-style: none;
 }
 #nav-list li a {
@@ -46,7 +53,6 @@ html, body {
 	border-left: 1px double #00AAFF;
 
 	-webkit-transition: all 0.5s ease-in;
-	-moz-transition: all 0.5s ease-in;
 	transition: all 0.5s ease-in;
 }
 #nav-list li a:hover {
@@ -68,10 +74,13 @@ html, body {
 	overflow: hidden;
 	color: rgba(255,255,255,.5);
 	font-weight: 900;
+	text-align: center;
 
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
@@ -79,10 +88,15 @@ html, body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	z-index: 1;
+
+	
 	
 }
 @media (max-width:500px) {
 	.jumbotron {
+		background-image: 
+			-webkit-radial-gradient(
+			bottom right circle, #00AAFF -80%,black);
 		background-image: 
 			radial-gradient(
 			circle at bottom right, #00AAFF -80%,black);
@@ -353,6 +367,7 @@ html, body {
 	-ms-flex-line-pack: start;
 	    align-content: flex-start;
 	color: #00AAFF;
+	flex-grow: 3;
 }
 /*projects images*/
 .project-pic img {
@@ -557,5 +572,3 @@ a:active, a:focus {
     100% { opacity:1; }
 }
 
-
-/*@media screen and (max-width: 800px)*/
