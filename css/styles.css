@@ -240,6 +240,11 @@ navbar-toggle {
 		margin: 0;
 		height: auto;
 	}
+	.skills i {
+		border: 2px solid #00AAFF;
+		padding: 3rem;
+		border-radius: 100%;
+	}
 	#about-title-heading, #languages-title h1 {
 		font-size: 3rem;
 	}
