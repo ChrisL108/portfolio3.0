@@ -125,7 +125,7 @@ $(function() {
 		// add active class to selected project heading
 		$(this).addClass("active");
 		// move view to top of project links
-		$(window).scrollTop($projectTitles.offset().top - 50);
+		$(window).scrollTop($projectTitles.offset().top - 44);
 	});
 
 	// ~~~~~~ WINDOW SCROLL events

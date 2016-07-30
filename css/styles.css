@@ -50,6 +50,13 @@ html, body {
 	padding:0.5rem;
 	border-right: 1px double #00AAFF;
 	border-left: 1px double #00AAFF;
+
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+#nav-list li a:hover {
+	background-color: #005E8D;
 }
 	
 /* Jumbotron */
