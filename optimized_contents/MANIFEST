@@ -1,0 +1,15 @@
+This zip file contains optimized resources for http://chrislacaille.com/. The optimized resources are listed below in the format of: 
+filename: url
+
+Note: We only include up to 10 MB of optimized contents. If the
+optimized contents of your page are larger than 10 MB, we list them in
+this file too, with 'NOT INCLUDED' to indicate those URLs require
+further optimization.
+
+css/styles.css: http://chrislacaille.com/css/styles.css
+js/main.js: http://chrislacaille.com/js/main.js
+image/html.png: http://chrislacaille.com/img/social/html.png
+image/css.png: http://chrislacaille.com/img/social/css.png
+image/javascript.png: http://chrislacaille.com/img/social/javascript.png
+image/photoshop.png: http://chrislacaille.com/img/social/photoshop.png
+image/connect.png: http://chrislacaille.com/img/connect.png
