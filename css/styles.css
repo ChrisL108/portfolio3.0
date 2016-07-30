@@ -89,9 +89,6 @@ html, body {
 	        justify-content: center;
 	z-index: 1;
 }
-.typed-cursor {
-	display: block;
-}
 @media (max-width:500px) {
 	.jumbotron {
 		background-image: 
@@ -367,7 +364,9 @@ html, body {
 	-ms-flex-line-pack: start;
 	    align-content: flex-start;
 	color: #00AAFF;
-	flex-grow: 3;
+	-webkit-box-flex: 3;
+	    -ms-flex-positive: 3;
+	        flex-grow: 3;
 }
 /*projects images*/
 .project-pic img {
