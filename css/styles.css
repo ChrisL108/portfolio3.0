@@ -241,9 +241,7 @@ html, body {
 		padding: 0.4rem;
 	}
 }
-/*@media (max-width: 950px) {
 
-}*/
 #languages, #languages-title {
 	-webkit-box-flex: 0;
 	    -ms-flex: 0 1 100%;
@@ -296,11 +294,12 @@ html, body {
 	border-bottom: 5px solid #005E8D;
 	line-height: 2rem;
 	padding-top: 0.8rem;
+
 }
 .projects a {
 	font-size: 1.5rem;
 	padding:0.5rem;
-	
+
 }
 
 .projects:hover, .projects.active {
