@@ -93,9 +93,7 @@ navbar-toggle {
 	font-weight: 900;
 
 	display: -webkit-box;
-
 	display: -ms-flexbox;
-
 	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
@@ -108,8 +106,7 @@ navbar-toggle {
 }
 @media (max-width: 450px) {
 	.jumbotron {
-		background-image: -webkit-linear-gradient(bottom, #002233,black, #002233 );
-		background-image: linear-gradient(to top, #002233,black, #002233 );
+		background-image: url(../img/space3-small.jpg);
 	}
 }
 #jumbotron-text {
