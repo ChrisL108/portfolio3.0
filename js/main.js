@@ -39,9 +39,9 @@ $(function() {
 			"Let's Collaborate!" ],
 		typeSpeed: 11,
 		startDelay: 2000,
-		cursorChar: "108.315.25.00 - Initializing",
+		cursorChar: "",
 		callback: function() {
-			$(".typed-cursor").fadeOut();
+			// $(".typed-cursor").fadeOut();
 			window.smoothScroll();
 		},
 	});

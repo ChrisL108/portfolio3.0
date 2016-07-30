@@ -88,9 +88,9 @@ html, body {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	z-index: 1;
-
-	
-	
+}
+.typed-cursor {
+	display: block;
 }
 @media (max-width:500px) {
 	.jumbotron {
