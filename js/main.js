@@ -33,8 +33,7 @@ $(function() {
 		$userMsg = $("#userMsg"),
 		$formMessages = $("#form-messages");
 	// Navbar vars
-	var $navbar = $("nav"),
-		$titleMeta = $(".title-meta");
+	var $navTitle = $("#nav-title, .title-meta");
 
 	
 	// Change jumbotron to fit to viewport width/height
@@ -61,8 +60,7 @@ $(function() {
 				var $target = $(this.hash);
 				$target = $target.length && $target || $("[name=" + this.hash.slice(1) +"]");
 				if ($target.length) {
-					var navOffset = $(window).scrollTop() == 0 ?  150 : 50;
-					var targetOffset = $target.offset().top - navOffset;
+					var targetOffset = $target.offset().top - 44;
 					$("html,body").stop(true);
 					$("html,body").animate({scrollTop: targetOffset}, 1000);
 					return false;
@@ -99,20 +97,7 @@ $(function() {
 		}
 	}, 75);
 
-	// ~~~~~~ WINDOW SCROLL events
 
-	// #about text fade in on scroll
-	$window.on("scroll", function() {
-		// $(".nav-item").prop({"height": $nav.innerHeight});
-		if ( $window.scrollTop() > 100) {
-			$navbar.removeClass("static-nav").addClass("fixed-nav");
-			$titleMeta.fadeOut();
-		} else {
-			$titleMeta.fadeIn();
-			$navbar.removeClass("fixed-nav").addClass("static-nav");
-		}
-
-	});
 
 // Project navigation
 	var $projectTitles = $(".projects"),
@@ -141,6 +126,16 @@ $(function() {
 		$(this).addClass("active");
 		// move view to top of project links
 		$(window).scrollTop($projectTitles.offset().top - 50);
+	});
+
+	// ~~~~~~ WINDOW SCROLL events
+	$window.on("scroll", function() {
+		if ( $window.scrollTop() > 100) {
+			$navTitle.fadeOut();
+		} else {
+			$navTitle.fadeIn();
+		}
+
 	});
 
 // Contact form - AJAX
