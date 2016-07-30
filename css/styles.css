@@ -471,12 +471,12 @@ footer a, footer p {
 	display: inline-flex;
 	padding: .75rem .50rem;
 }
-#social-list li a {
+#social-list li a,#social-list li a:visited {
 	color: gray;
 }
 #social-list li a:hover,#social-list li a:active,
-#social-list li a:visited {
-	color: black;
+#social-list li a:focus {
+	color: white;
 }
 
 /* Color Scheme profile colors for chrislacaille.com */
