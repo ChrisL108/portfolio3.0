@@ -83,7 +83,9 @@ html, body {
 }
 @media (max-width:500px) {
 	.jumbotron {
-		background-image: url(../img/space3-small.jpg);
+		background-image: 
+			radial-gradient(
+			circle at bottom right, #00AAFF -80%,black);
 	}
 }
 #jumbotron-text {
