@@ -81,7 +81,7 @@ html, body {
 	z-index: 1;
 	
 }
-@media (max-width: 450px) {
+@media (max-width:500px) {
 	.jumbotron {
 		background-image: url(../img/space3-small.jpg);
 	}
@@ -357,6 +357,17 @@ html, body {
 	width: 25rem;
 	border: 1px solid #00AAFF;
 }
+/*Projects description*/
+.project-description {
+	-ms-flex-line-pack: end;
+	    align-content: flex-end;
+	color:white;
+	font-size: 1.2rem;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
+
+}
 @media (max-width: 950px) {
 	#projects-title {
 		padding:0.5rem;
@@ -368,26 +379,14 @@ html, body {
 		    flex-shrink: 3;
 	}
 	.project-description, .project-pic {
-		font-size: 1rem;
+		font-size: 0.8rem;
+	}
+	.project-pic img {
+		width: 13rem;
 	}
 	
 }
-@media (max-width: 950px) {
-	.project-pic img {
-		width:15rem;
-	}
-}
-/*Projects right-side*/
-.project-description {
-	-ms-flex-line-pack: end;
-	    align-content: flex-end;
-	color:white;
-	font-size: 1.2rem;
-	-webkit-box-flex: 1;
-	    -ms-flex-positive: 1;
-	        flex-grow: 1;
 
-}
 
 /*Contact Form*/
 #contact-form {
