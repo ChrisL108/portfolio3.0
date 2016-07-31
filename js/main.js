@@ -124,12 +124,21 @@ $(function() {
 		$(window).scrollTop($projectTitles.offset().top - 44);
 	});
 
+	$("#contact-form h3").hide();
 	// ~~~~~~ WINDOW SCROLL events
 	$window.on("scroll", function() {
 		if ( $window.scrollTop() > 100) {
 			$navTitle.fadeOut();
 		} else {
 			$navTitle.fadeIn();
+		}
+		if ( $(window).scrollTop() >  
+				( 
+				$("#contact-form").offset().top -
+				$jumbotron.height() / 2 )
+				) {
+			$("#contact-form h4").slideUp();
+			$("#contact-form h3").slideDown();
 		}
 
 	});
