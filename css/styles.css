@@ -356,7 +356,8 @@ html, body {
 	height: 100%;
 	padding: 5rem;
 	line-height: 2rem;
-	/*font-family: 'Inconsolata' ;*/
+	border-bottom: 1px dotted #00AAFF;
+    border-top: 1px dotted #00AAFF;
 }
 /*Projects left-side*/
 .project-pic {
@@ -458,18 +459,17 @@ footer {
 }
 footer a, footer p {
 	color: gray;
+	display: inline;
 	text-decoration: none;
-	font-size: 1.3rem;
-	padding: 1rem;
+	padding-right: 1rem;
+	padding-left: .3rem;
 }
 #social-list li {
 	-ms-flex-item-align: center;
 	    align-self: center;
 	list-style: none;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	padding: .75rem .50rem;
+	display: inline-block;
+	padding: 3rem .50rem;
 }
 #social-list li a,#social-list li a:visited {
 	color: gray;
@@ -477,6 +477,12 @@ footer a, footer p {
 #social-list li a:hover,#social-list li a:active,
 #social-list li a:focus {
 	color: white;
+}
+.footer-icons {
+	color: white;
+	display: inline;
+	margin: 0;
+	padding: 0;
 }
 
 /* Color Scheme profile colors for chrislacaille.com */
