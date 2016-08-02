@@ -360,18 +360,13 @@ html, body {
     border-top: 1px dotted #00AAFF;
 }
 /*Projects left-side*/
-.project-pic {
-	-ms-flex-line-pack: start;
-	    align-content: flex-start;
+.project-description h2 {
 	color: #00AAFF;
-	-webkit-box-flex: 3;
-	    -ms-flex-positive: 3;
-	        flex-grow: 3;
 }
 /*projects images*/
 .project-pic img {
 	width: 25rem;
-	border: 1px solid #00AAFF;
+	margin: 1rem;
 }
 /*Projects description*/
 .project-description {
