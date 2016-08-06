@@ -205,16 +205,26 @@ html, body {
 	    justify-content: space-around;
 	-ms-flex-negative: 2;
 	    flex-shrink: 2;
+		
+		transition: all 0.5s linear;
 }
 
 .skills i {
-	color: #005E8D;
+	color: #00AAFF;
 	text-shadow: 2px 2px 4px #000;
 }
-.skills:hover i {
-	color: #00AAFF;
-	text-shadow: 2px 2px 4px #002233;
+.skills:hover {
+	background-color: rgba(21, 21, 21, 0.74);
+	text-shadow: 1px 1px 3px #00AAFF;
+	border: 5px inset #00AAFF;
+	color: white;
+	/*animation: blink 30ms infinite alternate;*/
 }
+.skills:hover i {
+	/*color: #00AAFF;*/
+	text-shadow: 2px 2px 8px #000;
+}
+
 .skill-title {
 	margin: 1rem;
 	color: white;
@@ -555,19 +565,19 @@ a:active, a:focus {
   }
 }
 /* TYPED.JS */
-.typed-cursor{
+/*.typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
-}
+}*/
 @keyframes blink{
     0% { opacity:1; }
-    50% { opacity:0; }
+    50% { opacity:0.7; }
     100% { opacity:1; }
 }
 @-webkit-keyframes blink{
     0% { opacity:1; }
-    50% { opacity:0; }
+    50% { opacity:0.7; }
     100% { opacity:1; }
 }
 
