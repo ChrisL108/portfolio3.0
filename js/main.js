@@ -42,7 +42,7 @@ $(function() {
 		cursorChar: "",
 		callback: function() {
 			// $(".typed-cursor").fadeOut();
-			window.smoothScroll();
+			smoothScroll();
 		},
 	});
 
