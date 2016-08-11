@@ -218,7 +218,7 @@ html, body {
 	text-shadow: 1px 1px 3px #00AAFF;
 	border: 5px inset #00AAFF;
 	color: white;
-	/*animation: blink 30ms infinite alternate;*/
+	animation: blink 30ms infinite alternate;
 }
 .skills:hover i {
 	/*color: #00AAFF;*/
