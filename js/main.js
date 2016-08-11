@@ -146,36 +146,34 @@ $(function() {
 // Contact form - AJAX
 	$("form").on("submit", function(e) {
 		e.preventDefault();
-		contactForm.serialize();
 		$.ajax({
-			url: contactForm.attr("action"),
+			url: "phpMailer/PHPMailer.php",
 			type: "POST",
-			data: {name: $userName.val(),
-				email: $userEmail.val(),
-				message: $userMsg.val()
+			data: { name: $userName.val(),
+					message: $userMsg.val(),
+					email: $userEmail.val()
 			},
+			success: function(){
+				console.log("success");
+				$formMessages.html("Message Sent.. Thank You! I'll get back to you ASAP.");
+				$userName.val("");
+				$userEmail.val("");
+				$userMsg.val("");
+			}
 		})
 		.done(function() {
-			console.log("success");
-			$formMessages.html("Message Sent.. Thank You! I'll get back to you ASAP.");
-			$userName.val("");
-			$userEmail.val("");
-			$userMsg.val("");
+			console.log("Message Sent!");
 		})
-		.fail(function(data) {
-			console.log("error sending form data...");
-			// Set the message text.
-			if (data.responseText !== "") {
-				$formMessages.html(data.responseText);
-			} else {
-				$formMessages.html("Oops! An error occured and your message could not be sent.");
-			}
+		.fail(function(e) {
+			console.log("error - " + e.responseText);
+			$formMessages.html("Oops! An error occured and your message could not be sent.");
 		})
 		.always(function() {
 			console.log("complete");
 		});
+
 	
-	}); // END AJAX
+	}); // END form submit
 
 
 });   // end ready()
