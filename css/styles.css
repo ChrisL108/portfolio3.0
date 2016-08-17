@@ -97,6 +97,7 @@ html, body {
 @media (max-width:550px) {
 	.jumbotron {
 		background-image: linear-gradient( #00334D, #005E8D );
+		/*, linear-gradient( #005E8D, #00334D )*/
 	}
 }
 #jumbotron-text {
@@ -494,6 +495,9 @@ footer a, footer p {
 	display: inline;
 	margin: 0;
 	padding: 0;
+}
+.footer-my-info i, .footer-my-info p {
+	margin-top: 10px;
 }
 
 /* Color Scheme profile colors for chrislacaille.com */
